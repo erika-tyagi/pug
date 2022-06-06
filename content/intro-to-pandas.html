@@ -2821,15 +2821,11 @@ Unique Family Identifier Order
 <h3>Appending Data<a class="headerlink" href="#appending-data" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">left_frame</span><span class="p">,</span> <span class="n">right_frame</span><span class="p">],</span> <span class="n">sort</span><span class="o">=</span><span class="s1">&#39;True&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">left_frame</span><span class="p">,</span> <span class="n">right_frame</span><span class="p">],</span> <span class="n">sort</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_1744/2027227037.py:1: FutureWarning: Passing non boolean values for sort is deprecated and will error in a future version!
-  pd.concat([left_frame, right_frame], sort=&#39;True&#39;)
-</pre></div>
-</div>
 <div class="output text_html"><div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -2947,6 +2943,9 @@ Year
 1972        54          54      54     54  
 </pre></div>
 </div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
 </div>
 </div>
 <p>Note: This only generates counts for each year. If we want averages, sums or any other summary statistics we have to specify that:</p>
@@ -2993,9 +2992,9 @@ Year
 1990  5.336364  5.190909  
 1991  6.516364  6.363636  
 1992  7.060727  6.893455  
-
-
-      High_Value  Low_Value  CPI_Average  High_2018  Low_2018  Difference  \
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>      High_Value  Low_Value  CPI_Average  High_2018  Low_2018  Difference  \
 Year                                                                        
 1988        3.35       3.35   118.258333       7.09      7.09         0.0   
 1989        3.35       3.35   123.966667       6.77      6.77         0.0   
