@@ -122,7 +122,7 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="installation-guide.html">
+  <a class="reference internal" href="installation.html">
    Installing Python
   </a>
  </li>
@@ -421,18 +421,18 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="aws-python">
 <h1>AWS &amp; Python<a class="headerlink" href="#aws-python" title="Permalink to this headline">#</a></h1>
-<p>From data storage to computing, Amazon Web Services is a scalable and and cost effective alternative to on premise options. This guide demonstrates how Urban Institute researchers can use Python in conjunction with Amazon Services S3 and EC2 to create a cloud based workflow.</p>
+<p>From data storage to computing, Amazon Web Services (AWS) is a scalable and and cost effective alternative to on premise options. This guide demonstrates how Urban Institute researchers can use Python in conjunction with Amazon Services S3 and EC2 to create a cloud based workflow.</p>
 <section id="s3">
 <h2>S3<a class="headerlink" href="#s3" title="Permalink to this headline">#</a></h2>
-<p>Boto3 is the Amazon Web Services SDK for Python with an easy to use, well documented <a class="reference external" href="https://boto3.amazonaws.com/v1/documentation/api/latest/index.html">API</a>. It allows one to write Python code that interacts with AWS. In this guide we will explore specifically how Boto3 can be used to interact with AWS S3, Simple Storage Service.</p>
+<p>Boto3 is the AWS SDK for Python with an easy to use, well documented <a class="reference external" href="https://boto3.amazonaws.com/v1/documentation/api/latest/index.html">API</a>. It allows one to write Python code that interacts with AWS. In this guide we will explore specifically how Boto3 can be used to interact with AWS S3, Simple Storage Service.</p>
 <p>S3 can be used to store big data for a relatively small price. It is essentially a file storage system, consisting of buckets, which are analogous to folders. You can use Boto3 to place files into buckets and download files that are stored in buckets, among other actions. In the context of a research model or script, this means you can store and read in input files from S3 and write output files to S3.</p>
 <section id="setting-up">
 <h3>Setting up<a class="headerlink" href="#setting-up" title="Permalink to this headline">#</a></h3>
-<p>Getting started with Boto3 involves installing Boto3 and authenticating yourself using your AWS credentials as described in this quickstart <a class="reference external" href="https://boto3.amazonaws.com/v1/documentation/api/latest/guide/quickstart.html">guide</a>. The most secure way to do so is by setting up your credentials file using the Amazon Command Line Interface. In order to do this, you will need your own access key and access key ID. In order to set up a role with the permissions you need, you should contact the tech team.</p>
+<p>Getting started with Boto3 involves installing Boto3 and authenticating yourself using your AWS credentials as described in this quickstart <a class="reference external" href="https://boto3.amazonaws.com/v1/documentation/api/latest/guide/quickstart.html">guide</a>. The most secure way to do so is by setting up your credentials file using the Amazon Command Line Interface (CLI). In order to do this, you will need your own access key and secret access key. In order to set up a role with the permissions you need, you should contact the tech team.</p>
 </section>
 <section id="running-boto3-commands">
 <h3>Running Boto3 Commands<a class="headerlink" href="#running-boto3-commands" title="Permalink to this headline">#</a></h3>
-<p>Using Boto3, there are multiple classes that will allow interaction with S3. In this guide we will use the Resource class, which is a high level, object oriented interface to AWS.</p>
+<p>Using Boto3, there are multiple classes that will allow interaction with S3. In this guide we will use the <code class="docutils literal notranslate"><span class="pre">resource</span></code> class, which is a high level, object oriented interface to AWS.</p>
 <p>First, we will instantiate a service resource which represents the Amazon S3 service.</p>
 <p>In order to view all of the buckets that are associated with your AWS S3 account, you can run the below code. If your desired bucket is not there, contact the tech team to adjust the permissions associated with you account.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">boto3</span>
@@ -464,21 +464,22 @@ title="Print to PDF"
 </section>
 <section id="ec2">
 <h2>EC2<a class="headerlink" href="#ec2" title="Permalink to this headline">#</a></h2>
-<p>EC2 is an amazon service which provides compute capacity in the cloud. Rather than running your models and scripts on Urban on premise servers, you can run them on EC2 which provides customizable compute capacity, memory, and more.</p>
+<p>EC2 is an Amazon service which provides compute capacity in the cloud. Rather than running your models and scripts on Urban on premise servers, you can run them on EC2 which provides customizable compute capacity, memory, and more.</p>
 <section id="using-tech-tools-to-spin-up-an-ec2-instance">
 <h3>Using tech-tools to spin up an EC2 instance<a class="headerlink" href="#using-tech-tools-to-spin-up-an-ec2-instance" title="Permalink to this headline">#</a></h3>
 <p>The tech team at Urban has designed a tool for researchers to easily create and terminate EC2 instances. This tool is hosted on the tech-tools site via the Urban Institute intranet page.</p>
-<p>To begin, under the <strong>Research Platforms</strong> dropdown on the tech-tools site, select <strong>Start or Stop EC2 instance</strong>. In order to spin up your EC2 instance, you will be able to select which instance type you would like based on your specific needs and submit the form.</p>
+<p>To begin, under the “Research Platforms” dropdown on the tech-tools site, select “Start or Stop EC2 instance.” In order to spin up your EC2 instance, you will be able to select which instance type you would like based on your specific needs and submit the form.</p>
 <p><img alt="title" src="../_images/tech-tools.png" /></p>
-<p>After your instance has spun up, you will receive an email which contains links that point your browser to Jupyter or RStudio on your instance. You can also use your instance’s IP to SSH into it. When you are finished with the instance, you can terminate it, and you will be charged only for the amount of time that it was running.</p>
+<p>After your instance has spun up, you will receive an email which contains links that point your browser to Jupyter or RStudio on your instance. Note: You must be within Urban’s IP range to access those links from your browser (e.g. through a virtual desktop if you are working remotely).</p>
+<p>You can also use your instance’s IP to SSH into it. When you are finished with the instance, you can terminate it, and you will be charged only for the amount of time that it was running.</p>
 </section>
 </section>
 <section id="putting-it-all-together">
 <h2>Putting it all together<a class="headerlink" href="#putting-it-all-together" title="Permalink to this headline">#</a></h2>
-<p>S3 and EC2 can be used to create a workflow entirely hosted in the cloud. The tech-tools site simplifies the process of working with EC2, abstracting many details of the creation and termination away from the user. In terms of more complex workflows using EC2 and other services, the Technology and Data team can partner with your team for design and implementation. in order to create more complex workflows. An example workflow fpr a Python data processing script is detailed below.</p>
+<p>S3 and EC2 can be used to create a workflow entirely hosted in the cloud. The tech-tools site simplifies the process of working with EC2, abstracting many details of the creation and termination away from the user. In terms of more complex workflows using EC2 and other services, the tech team can partner with your team for design and implementation. in order to create more complex workflows. An example workflow for a Python data processing script is detailed below.</p>
 <p>As mentioned earlier, a rule can be set so that the placement of a file into an S3 bucket triggers the creation of an EC2 instance. This workflow begins with an input data file being placed into an input S3 bucket via Boto3. This triggers an EC2 instance to spin up, obtain the input file, and run the data processing script. At the end of the run, the output file is written to the output S3 bucket, and the EC2 instance automatically terminates. Additionally, a rule is set on the output bucket to trigger a notification of the user when a file is placed into it.</p>
 <p><img alt="title" src="../_images/aws-workflow.png" /></p>
-<p>This and similar workflows have been employed by the Urban Institute Tech and Data team to run data processing scripts and research models, including the TPC Tax Calculator and the Social Genome Model. Both of the models use Boto3 to place and retrieve objects in S3, and the Social Genome Model written in Python because of Python’s compatibility with the EC2 server.</p>
+<p>This and similar workflows have been employed by the Urban Institute tech team to run data processing scripts and research models, including the TPC Tax Calculator and the Social Genome Model. Both of the models use Boto3 to place and retrieve objects in S3, and the Social Genome Model leverages Python’s compatibility with EC2.</p>
 </section>
 </section>
 

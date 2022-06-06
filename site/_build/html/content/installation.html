@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Why Python &#8212; Python Users Group</title>
+    <title>Installing Python &#8212; Python Users Group</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -54,8 +54,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Installing Python" href="installation.html" />
-    <link rel="prev" title="Python Users Group" href="index.html" />
+    <link rel="next" title="Intro to Python" href="intro-to-python.html" />
+    <link rel="prev" title="Why Python" href="why-python.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -116,13 +116,13 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="why-python.html">
    Why Python
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="installation.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    Installing Python
   </a>
  </li>
@@ -224,7 +224,7 @@ title="Fullscreen mode"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../_sources/content/why-python.md"
+        <a href="../_sources/content/installation.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -261,23 +261,110 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#python-2-or-3">
+   Python 2 or 3?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#using-anaconda">
+   Using Anaconda
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#installing-packages">
+   Installing Packages
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#using-virtual-environments">
+   Using Virtual Environments
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#choosing-an-ide">
+   Choosing an IDE
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#installing-python-directly">
+   Installing Python Directly
+  </a>
+ </li>
+</ul>
+
+    </nav>
 </div>
     </div>
     <div class="article row">
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Why Python</h1>
+                <h1>Installing Python</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#python-2-or-3">
+   Python 2 or 3?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#using-anaconda">
+   Using Anaconda
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#installing-packages">
+   Installing Packages
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#using-virtual-environments">
+   Using Virtual Environments
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#choosing-an-ide">
+   Choosing an IDE
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#installing-python-directly">
+   Installing Python Directly
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -285,13 +372,49 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="why-python">
-<h1>Why Python<a class="headerlink" href="#why-python" title="Permalink to this headline">#</a></h1>
-<p>Python is an open-source general-purpose programming language with broad versatility, clean and readable syntax, and an active developer community. Python’s simple and easy-to-understand syntax makes the learning curve much less steep compared to many other statistical software packages and programming languages.</p>
-<p>Over the past decade, Python has made great strides in its data analysis capabilities with machine learning packages like <a class="reference external" href="https://scikit-learn.org/stable/">scikit-learn</a>, data visualizations tools like <a class="reference external" href="https://seaborn.pydata.org/">seaborn</a> and <a class="reference external" href="https://plotly.com/python/">plotly</a>, text analysis packages like <a class="reference external" href="https://www.nltk.org/">NLTK</a>, web scraping libraries like <a class="reference external" href="https://www.crummy.com/software/BeautifulSoup/">Beautiful Soup</a>, and interfaces for working with big data and cloud technology like <a class="reference external" href="https://spark.apache.org/docs/latest/api/python/">PySpark</a> and <a class="reference external" href="https://aws.amazon.com/sdk-for-python/">boto3</a>.</p>
-<p>Packages such as <a class="reference external" href="https://rstudio.github.io/reticulate/">reticulate</a> and <a class="reference external" href="https://rpy2.github.io/">rpy2</a> have also made using Python alongside R much easier, allowing users to benefit from the comparative advantages of the two languages together.</p>
-<p>Python’s multiple IDE options, like Spyder, PyCharm, or Juypter Notebook, also give users flexibility in how they develop and share their work with others.</p>
-<p>Slides and a recording and from a previous Python Users Group session discussing use cases for Python at Urban are available <a class="reference external" href="https://urbanorg.app.box.com/folder/162248420670">here</a>.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="installing-python">
+<h1>Installing Python<a class="headerlink" href="#installing-python" title="Permalink to this headline">#</a></h1>
+<section id="python-2-or-3">
+<h2>Python 2 or 3?<a class="headerlink" href="#python-2-or-3" title="Permalink to this headline">#</a></h2>
+<p><a class="reference external" href="https://wiki.python.org/moin/Python2orPython3"><strong>Python 2.x is legacy, Python 3.x is the present and future of the language.</strong></a></p>
+<p>There are two versions of Python - Python 2 and Python 3. Unless you have inherited an old project that requires you to use Python 2, or need libraries that are available only in Python 2, then you should install and use Python 3 exclusively.</p>
+</section>
+<section id="using-anaconda">
+<h2>Using Anaconda<a class="headerlink" href="#using-anaconda" title="Permalink to this headline">#</a></h2>
+<p>We strongly recommend using Anaconda if you want to use Python for data science. This will simplify dealing with things like privileges, environments and packages.</p>
+<p>Anaconda is a Python distribution that includes a Python interpreter, a number of Python packages (including pandas, numpy, and scipy), and tools like editors. To install, go to the <a class="reference external" href="https://www.anaconda.com/distribution/#download-section">Anaconda Download page</a>. Select Windows, MacOS, or Linux, then select a Python version, and click Download.</p>
+<p>For a guided walk-through of installing and getting started with Anaconda, follow <a class="reference external" href="https://github.com/UI-Research/python-resources/blob/main/notebooks/anaconda-installation.ipynb">this notebook</a> from a previous Python Users Group session.</p>
+<p>On opening Anaconda, you will be brought to the Navigator page from which you can launch various applications in order to run your code, including Jupyter Notebook and Spyder.</p>
+<p>Jupyter Notebook is similar to R Markdown, where you can edit and run blocks of code along with markdown text. It allows you to create and share documents that contain live code, equations, visualizations and narrative text.</p>
+<p>Spyder is an environment for running Python, similar to RStudio for R. It offers editing, analysis, and debugging. For tips on using Spyder, see <a class="reference external" href="https://urbanorg.box.com/s/3raiuvsykulh290884xkogduzbdhi371">these resources</a> from a previous Python Users Group session.</p>
+</section>
+<section id="installing-packages">
+<h2>Installing Packages<a class="headerlink" href="#installing-packages" title="Permalink to this headline">#</a></h2>
+<p>Anaconda comes with a package management system called <code class="docutils literal notranslate"><span class="pre">conda</span></code>. To install a package, open your command prompt and run</p>
+<p><code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">{package-name}</span></code></p>
+<p>Note that this must be done from the command line and <strong>not</strong> the Python session (in contrast to package management in R).</p>
+<p>Base Python has its own package management tool called <code class="docutils literal notranslate"><span class="pre">pip</span></code>. If a package is not available with <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span></code>, you can try running</p>
+<p><code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">{package-name}</span></code></p>
+<p>You should always try running <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span></code> first, as this will do a better job of resolving package dependency issues.</p>
+</section>
+<section id="using-virtual-environments">
+<h2>Using Virtual Environments<a class="headerlink" href="#using-virtual-environments" title="Permalink to this headline">#</a></h2>
+<p>To avoid running into version issues between multiple projects that rely on different Python versions or different versions of packages, you might want to try using virtual environments. A virtual environment is a way to create an isolated space so you can, for example, run Python 2.7 for one project and Python 3.7 for another on the same computer. <code class="docutils literal notranslate"><span class="pre">conda</span></code> includes robust support for creating and managing different environments. For more detail, see the <a class="reference external" href="https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html">conda documentation</a>.</p>
+</section>
+<section id="choosing-an-ide">
+<h2>Choosing an IDE<a class="headerlink" href="#choosing-an-ide" title="Permalink to this headline">#</a></h2>
+<p>There are a number of different integrated development environments (IDEs) for Python. Some popular ones include:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.spyder-ide.org/">Spyder</a> comes installed with Anaconda, and is most similar to RStudio for R.</p></li>
+<li><p><a class="reference external" href="https://jupyter.org/">Jupyter</a> also comes with Anaconda, and is most similar to RMarkdown.</p></li>
+<li><p><a class="reference external" href="https://code.visualstudio.com/">Visual Studio Code</a> includes support for debugging, syntax highlighting, code completion, and more. It also offers thousands of extensions (including Python-specific extensions).</p></li>
+<li><p><a class="reference external" href="https://www.jetbrains.com/pycharm/">PyCharm</a> is another popular Python IDE. The free version offers syntax highlighting, access to plugins, and web development support.</p></li>
+</ul>
+</section>
+<section id="installing-python-directly">
+<h2>Installing Python Directly<a class="headerlink" href="#installing-python-directly" title="Permalink to this headline">#</a></h2>
+<p>You can also install Python directly onto your machine rather than using Anaconda. See the Python <a class="reference external" href="https://www.python.org/downloads/">downloads page</a> for the most up to date Mac, Linux, and Windows versions of Python.</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -321,17 +444,17 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="index.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="why-python.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Python Users Group</p>
+            <p class="prev-next-title">Why Python</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="installation.html" title="next page">
+    <a class='right-next' id="next-link" href="intro-to-python.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Installing Python</p>
+        <p class="prev-next-title">Intro to Python</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

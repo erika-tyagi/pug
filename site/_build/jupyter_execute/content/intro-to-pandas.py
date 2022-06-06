@@ -47,13 +47,12 @@ import numpy as np
 # In[4]:
 
 
-d = pd.DataFrame({'one': [1., 2., 3., 4.],
-     'two': [4., 3., 2., 1.]})
+d = pd.DataFrame({'one': [1., 2., 3., 4.], 'two': [4., 3., 2., 1.]})
 
 d
 
 
-# `d` is the name of our DataFrame and it has two columns, one and two, and four rows, 0-3. (Python is 0 indexed, meaning it counts from 0...1...2...and so on.)
+# The name of our DataFrame is `d`, and it has two columns, `one` and `two`, and four rows, 0-3. (Python is 0 indexed, meaning it counts from 0...1...2...and so on.)
 # 
 # Each data point can be referenced through its Index (which corresponds to its row, the far most left value) and the column signifies what the value means. We can call a single Pandas column with this command:
 
@@ -97,7 +96,7 @@ print(list)
 
 # ### Index
 # 
-# Both the Series and the DataFrame have an index that signifies order and allows for referencing specific points. The Index itself is an object - though by itself it holds little purpose. 
+# Both the Series and the DataFrame have an Index that signifies order and allows for referencing specific points. The Index itself is an object. 
 
 # In[9]:
 
@@ -108,7 +107,7 @@ ind
 
 # ## Importing Data
 
-# Pandas has the ability to read and export multiple data format types: be it a csv, dta, sas file, json file, sql and many more. Almost all data reading will be in the format: 
+# Pandas has the ability to read and export multiple data format types: be it a CSV, DTA, SAS file, JSON file, SQL and many more. Almost all data reading will be in the format: 
 # 
 # `pd.read_(NAME OF DATA FORMAT)('FILE_NAME')` 
 # 
@@ -154,7 +153,7 @@ df
 
 # ## Exporting Data
 # 
-# Exporting data is very simple as well and follow a pattern similar to exporting.
+# Exporting data is very simple as well and follows a pattern similar to exporting.
 
 # ### CSV
 
@@ -227,7 +226,7 @@ pd.DataFrame(values, index=index).head()
 
 # We know that we can view our data by simply printing the dataframe, but what if our data is too large?
 # 
-# The `.head()` function prints out the first 5 rows. (inside the parentheticals you can specify the first N observations you want to see).
+# The `.head()` function prints out the first 5 rows (inside the parentheticals you can specify the first N observations you want to see).
 
 # In[18]:
 
@@ -281,13 +280,9 @@ df.tail(2)
 
 # ## Subsetting Data
 
-# We can do traditional slicing through the index `[start, end]`. This will subset by rows. 
-# 
-# We can also do subsetting by the series `df[['columns_we_want_1', 'columns_we_want_2']]`. This will subset by columns.
-
-# Slicing by the index is similar to slicing any Python object by its index.
-
 # ### Slicing the data by rows
+# 
+# We can do traditional slicing through the index `[start, end]`. This will subset by rows. 
 
 # In[25]:
 
@@ -296,6 +291,8 @@ df[1:4]
 
 
 # ### Slicing the data by columns
+# 
+# To subset by columns, we can use `df[['columns_we_want_1', 'columns_we_want_2']]`.
 
 # In[26]:
 
@@ -378,8 +375,10 @@ print('\n')
 print(df.loc[[2, 51, 301]])
 
 
-# ## Summary Statistics
-# Often times, exporting summary stats in a different document type is the best way to visualize the results and understand the data.
+# ## Manipulating Data
+# 
+# ### Summary Statistics
+# Exporting summary stats in a different document type can help visualize results and understand data.
 
 # In[35]:
 
@@ -391,13 +390,8 @@ np.round(df.describe(), 2).T
 df.describe().transpose().to_csv('exports/summary_stats.csv', sep=',')
 
 
-# ## Manipulating Data
-
-# The standard way to create a new Pandas column or replace an old one is to call the Series (whether it exists or not) on the left hand side and set it equal to the expression that expresses that value you want to create. For example:
-# 
-# 
-
 # ### Creating a new variable
+# The standard way to create a new Pandas column or replace an old one is to call the Series (whether it exists or not) on the left hand side and set it equal to the expression that expresses that value you want to create. For example:
 
 # In[36]:
 
@@ -440,6 +434,7 @@ df = df.drop("7", axis=1)
 print(df.head())
 
 
+# ### Arithmetic Operations
 # Basic math operations are also easily applied in Pandas. 
 
 # In[40]:
@@ -451,11 +446,11 @@ df['Low*2'] = df['Low_Value']*2
 print(df.head())
 
 
-# ### Complex Variable Modification with `.map()`
+# ### Complex Operations with `.map()`
 # 
 # More complex operations can be solved through the `.map()` method. 
 # 
-# In the example below, `.map()` uses a dictionary to change results, which can help keep your code clean when replacing a large amount of values. Here we create an `abbrev` column for state abbreviations (we will create it and drop the variable after). 
+# In the example below, `.map()` uses a dictionary to change results, which can help keep code clean when replacing a large amount of values. Here we create an `abbrev` column for state abbreviations (we will create it and drop the variable after). 
 
 # In[41]:
 
@@ -492,7 +487,7 @@ print("\n")
 print(df['Year'].apply(add).head())
 
 
-# #### Lambda Functions
+# ### Lambda Functions
 # Lambda Functions (skipping defining a function if the function is simple enough):
 
 # In[44]:
@@ -515,7 +510,7 @@ print("\n")
 print(df['Year'].head(10))
 
 
-# Discovering missing values is  important: 
+# The following syntax can help identify missing values: 
 
 # In[46]:
 
@@ -524,7 +519,8 @@ print(df['Table_Data'].isnull().values.any())
 print(df['Year'].isnull().values.any())
 
 
-# We can also use `.drop_duplicates(keep = "first")` to drop all but the first observations of duplicates.
+# ### Duplicate Values
+# We can use `.drop_duplicates(keep = "first")` to drop all but the first observations of duplicates.
 # 
 # 
 
@@ -542,7 +538,7 @@ data_dup = data_dup.drop_duplicates(keep="last")
 print(data_dup)
 
 
-# ## Reshaping Data
+# ### Reshaping Data
 # 
 # Data can be reshaped using a variety of Pandas functions. Going from wide to long has a built in function `wide_to_long()`. We will load in a new dataset for this:
 
@@ -574,7 +570,7 @@ normal.reset_index()
 print(normal.head())
 
 
-# ## Merging Data
+# ### Merging Data
 # 
 # Merging data uses `pd.merge(data_1, data_2, on = identifier)`. 
 
@@ -608,7 +604,7 @@ pd.merge(left_frame, right_frame, on='key', how='left')
 pd.merge(left_frame, right_frame, on='key', how='right')
 
 
-# ## Appending Data
+# ### Appending Data
 
 # In[54]:
 
@@ -616,7 +612,7 @@ pd.merge(left_frame, right_frame, on='key', how='right')
 pd.concat([left_frame, right_frame], sort='True')
 
 
-# ## Collapsing Data
+# ### Collapsing Data
 
 # Collapsing data is accomplished by the `.groupby()` function. We will collapse by `Year`. 
 
@@ -638,5 +634,3 @@ print(by_year.mean()[20:25])
 print('\n')
 print(by_year.median()[20:25]) 
 
-
-# 

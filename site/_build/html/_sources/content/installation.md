@@ -49,4 +49,4 @@ There are a number of different integrated development environments (IDEs) for P
 
 ## Installing Python Directly
 
-You can also install Python directly onto your machine rather than using Anaconda. See the Python [downloads page](https://www.python.org/downloads/) for the most up to date Mac, Linux, and Windows versions of Python 2 and Python 3. They are available via the yellow download buttons on that page. Once the installer is in your downloads, open the installer and follow the steps onscreen to complete the installation. 
+You can also install Python directly onto your machine rather than using Anaconda. See the Python [downloads page](https://www.python.org/downloads/) for the most up to date Mac, Linux, and Windows versions of Python. 

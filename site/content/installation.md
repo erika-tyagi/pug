@@ -12,13 +12,13 @@ We strongly recommend using Anaconda if you want to use Python for data science.
 
 Anaconda is a Python distribution that includes a Python interpreter, a number of Python packages (including pandas, numpy, and scipy), and tools like editors. To install, go to the [Anaconda Download page](https://www.anaconda.com/distribution/#download-section). Select Windows, MacOS, or Linux, then select a Python version, and click Download.
 
-For a guided walk-through of installing and getting started with Anaconda, follow [this notebook](https://github.com/UI-Research/python-resources/blob/main/notebooks/anaconda-installation.ipynb) from a previous Python Users Group event. 
+For a guided walk-through of installing and getting started with Anaconda, follow [this notebook](https://github.com/UI-Research/python-resources/blob/main/notebooks/anaconda-installation.ipynb) from a previous Python Users Group session. 
 
 On opening Anaconda, you will be brought to the Navigator page from which you can launch various applications in order to run your code, including Jupyter Notebook and Spyder. 
 
 Jupyter Notebook is similar to R Markdown, where you can edit and run blocks of code along with markdown text. It allows you to create and share documents that contain live code, equations, visualizations and narrative text. 
 
-Spyder is an environment for running Python, similar to RStudio for R. It offers editing, analysis, and debugging. For tips on using Spyder, see [these resources](https://urbanorg.box.com/s/3raiuvsykulh290884xkogduzbdhi371) from a previous Python Users Group event. 
+Spyder is an environment for running Python, similar to RStudio for R. It offers editing, analysis, and debugging. For tips on using Spyder, see [these resources](https://urbanorg.box.com/s/3raiuvsykulh290884xkogduzbdhi371) from a previous Python Users Group session. 
 
 ## Installing Packages 
 
@@ -49,4 +49,4 @@ There are a number of different integrated development environments (IDEs) for P
 
 ## Installing Python Directly
 
-You can also install Python directly onto your machine rather than using Anaconda. See the Python [downloads page](https://www.python.org/downloads/) for the most up to date Mac, Linux, and Windows versions of Python 2 and Python 3. They are available via the yellow download buttons on that page. Once the installer is in your downloads, open the installer and follow the steps onscreen to complete the installation. 
+You can also install Python directly onto your machine rather than using Anaconda. See the Python [downloads page](https://www.python.org/downloads/) for the most up to date Mac, Linux, and Windows versions of Python. 
